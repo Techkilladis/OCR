@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI OCR – Gemini</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    <h1>AI OCR Reader</h1>
+
+    <input type="file" id="imageInput" accept="image/*" />
+    <button onclick="uploadImage()">Extract Text</button>
+
+    <div class="preview">
+      <img id="previewImg" />
+    </div>
+
+    <pre id="output">Extracted text will appear here...</pre>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
