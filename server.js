@@ -36,6 +36,9 @@ Return only the extracted text.
 Preserve line breaks and formatting.
 Do NOT add explanations or commentary.
 `;
+app.get("/", (req, res) => {
+  res.status(200).send("OCR server is running");
+});
 
 app.post("/ocr", upload.single("image"), async (req, res) => {
   try {
@@ -71,5 +74,9 @@ app.post("/ocr", upload.single("image"), async (req, res) => {
 });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
+
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+});
+
 
